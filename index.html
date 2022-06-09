@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ijlan's Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
@@ -14,6 +15,14 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <script src="https://kit.fontawesome.com/790d449e5c.js" crossorigin="anonymous"></script>
+
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -62,9 +71,59 @@
 
     <!-- about section start -->
     <section class="about" id="about">
-        <div class="max-width">
+
+        <!-- Modal
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button onclick="window.open('./images/ijlans-resume.pdf', '_blank');" type="button"
+                            class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- Modal Section -->
+
+        <div class="modal-bg">
+            <div class="modal">
+                <form onsubmit="window.open('./images/ijlans-resume.pdf', '_blank');">
+                    <div class="fields">
+                        <div class="field name">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="field email">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="field textarea">
+                        <textarea cols="30" rows="5" placeholder="Message.." required></textarea>
+                    </div>
+                    <button>Download CV</button>
+                    <span class="modal-close">X</span>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="max-width ">
             <h2 class="title">About me</h2>
             <div class="about-content">
+
+                <!-- modal -->
+
+
                 <div class="column left">
                     <img src="images/banner-image.png" alt="">
                 </div>
@@ -77,9 +136,13 @@
                         software skills as professional, and am always curious to know about all the technical aspects
                         that make
                         revolutionary changes in our day-to-day life.</p>
-                    <a onclick="window.open('./images/ijlans-resume.pdf', '_blank');" href="#" ;">Download CV</a>
+                    <a class="modal-btn">Download CV</a>
                 </div>
             </div>
+
+
+
+
         </div>
     </section>
 

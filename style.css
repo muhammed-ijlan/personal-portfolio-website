@@ -671,3 +671,108 @@ footer span a:hover {
     line-height: 38px;
   }
 }
+
+/* modal */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  background-color: white;
+  width: 30rem;
+  height: 25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.modal button {
+  color: #fff;
+  display: block;
+  width: 160px !important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: #242f9b;
+  border: 2px solid #242f9b;
+  transition: all 0.3s ease;
+}
+.modal button:hover {
+  color: #242f9b;
+  background: none;
+}
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fields .field {
+  height: 45px;
+  width: 100;
+  margin-bottom: 10px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+.field input,
+.textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+form .field input,
+form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+form .field input:focus,
+form .textarea textarea:focus {
+  border-color: #b3b3b3;
+}
+form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+form .button-area {
+  display: flex;
+  align-items: center;
+}
