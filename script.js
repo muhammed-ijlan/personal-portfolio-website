@@ -42,7 +42,7 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["Developer", "Designer"],
+    strings: ["Web Developer", "Web Designer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
@@ -85,21 +85,27 @@ modalClose.addEventListener("click", function () {
   modalBg.classList.remove("bg-active")
 })
 
-//model form data to email functionality
+//form submission handler
 
-const sendEmail = () => {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "ijlanijlu580@gmail.com",
-    Password: "8E7F5D3C3B65CFDDF617AA781A56AF6AFEB8",
-    To: 'ijlanijlu580@gmail.com',
-    From: document.getElementById("email").value,
-    Subject: "New contact Form Enquiry",
-    Body: "Name " + document.getElementById("name").value
-      + "<br> Email: " + document.getElementById("email").value
-      + "<br> Message: " + document.getElementById("message").value
+$(".submit-form").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycby55gS7ogG5Mv_DguTto5PbKOsQTkib-YjK1mgy8g/exec",
+    data: $(".submit-form").serialize(),
+    method: "post",
+    success: function (response) {
+      alert("Thank You for contacting me")
 
-  }).then(
-    message => alert(message)
-  );
-}
+      if ($('#submit'.value > 0)) {
+
+        window.location.reload()
+      }
+      window.open('./images/ijlans-resume.pdf', '_blank');
+      window.location.reload()
+    },
+    error: function (err) {
+      alert("Error")
+
+    }
+  })
+})

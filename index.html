@@ -15,14 +15,8 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <script src="https://kit.fontawesome.com/790d449e5c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- CSS only -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
-    <!-- JavaScript Bundle with Popper -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -75,20 +69,20 @@
         <!-- Modal Section -->
         <div class="modal-bg">
             <div class="modal">
-                <form onsubmit="sendEmail(); reset(); return false;">
-                    <!-- onsubmit="window.open('./images/ijlans-resume.pdf', '_blank');" -->
+                <form class="submit-form">
                     <div class="fields">
                         <div class="field name">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="field email">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
                         </div>
                     </div>
                     <div class="field textarea">
-                        <textarea cols="30" rows="5" id="message" placeholder="Message.." required></textarea>
+                        <textarea name="message" cols="30" rows="5" id="message" placeholder="Message.."
+                            required></textarea>
                     </div>
-                    <button>Download CV</button>
+                    <button type="submit">Download Resume</button>
                     <span class="modal-close">X</span>
                 </form>
             </div>
@@ -110,7 +104,7 @@
                         software skills as professional, and am always curious to know about all the technical aspects
                         that make
                         revolutionary changes in our day-to-day life.</p>
-                    <a class="modal-btn">Download CV</a>
+                    <a class="modal-btn">Hire Me</a>
                 </div>
             </div>
         </div>
@@ -125,8 +119,7 @@
                     <div class="box">
                         <i class="fas fa-chart-line"></i>
                         <div class="text">Front-end Development</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.
-                        </p> -->
+
                     </div>
                 </div>
                 <div class="card">
@@ -134,16 +127,14 @@
                         <i class="fas fa-paint-brush"></i>
 
                         <div class="text">Web Design</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.
-                        </p> -->
+
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-code"></i>
                         <div class="text">Backend Development</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.
-                        </p> -->
+
                     </div>
                 </div>
             </div>
@@ -214,35 +205,33 @@
                     <div class="box">
                         <img src="images/mybrary.jpg" alt="">
                         <div class="text">MyBrary App - NodeJS</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <img src="images/food-order.png" alt="">
                         <div class="text">Food Order - Angular</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <img src="images/reminder.jpg" alt="">
                         <div class="text">Reminder App - MEAN</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <img src="images/food.jpg" alt="">
                         <div class="text">Food Order - ReactJS</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <img src="images/bank.jpg" alt="">
                         <div class="text">Bank Application - MEAN</div>
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                     </div>
                 </div>
             </div>
@@ -282,24 +271,23 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form>
-                        <!-- <div class="fields">
+                    <form class="submit-form">
+                        <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
-                        </div> -->
+                            <textarea cols="30" rows="10" name="message" placeholder="Message.." required></textarea>
+                        </div>
                         <div class="button-area">
-                            <button onclick="window.open('mailto:ijlanijlu580@gmail.com');" type="submit">Send
-                                message</button>
+                            <button type="submit">Send message</button>
                         </div>
                     </form>
                 </div>
@@ -313,7 +301,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>

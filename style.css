@@ -384,8 +384,10 @@ section .title::after {
   padding: 25px 35px;
   text-align: center;
   overflow: hidden;
+  visibility: visible;
   transition: all 0.3s ease;
 }
+
 .teams .carousel .card:hover {
   background: #242f9b;
 }
@@ -678,7 +680,7 @@ footer span a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
