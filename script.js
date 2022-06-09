@@ -95,12 +95,24 @@ $(".submit-form").submit((e) => {
     method: "post",
     success: function (response) {
       alert("Thank You for contacting me")
-
-      if ($('#submit'.value > 0)) {
-
-        window.location.reload()
-      }
       window.open('./images/ijlans-resume.pdf', '_blank');
+      window.location.reload()
+    },
+    error: function (err) {
+      alert("Error")
+
+    }
+  })
+})
+
+$(".contact-form").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycby55gS7ogG5Mv_DguTto5PbKOsQTkib-YjK1mgy8g/exec",
+    data: $(".contact-form").serialize(),
+    method: "post",
+    success: function (response) {
+      alert("Thank You for contacting me")
       window.location.reload()
     },
     error: function (err) {
