@@ -84,3 +84,22 @@ modalBtn.addEventListener("click", function () {
 modalClose.addEventListener("click", function () {
   modalBg.classList.remove("bg-active")
 })
+
+//model form data to email functionality
+
+const sendEmail = () => {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "ijlanijlu580@gmail.com",
+    Password: "8E7F5D3C3B65CFDDF617AA781A56AF6AFEB8",
+    To: 'ijlanijlu580@gmail.com',
+    From: document.getElementById("email").value,
+    Subject: "New contact Form Enquiry",
+    Body: "Name " + document.getElementById("name").value
+      + "<br> Email: " + document.getElementById("email").value
+      + "<br> Message: " + document.getElementById("message").value
+
+  }).then(
+    message => alert(message)
+  );
+}

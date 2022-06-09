@@ -72,43 +72,21 @@
     <!-- about section start -->
     <section class="about" id="about">
 
-        <!-- Modal
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button onclick="window.open('./images/ijlans-resume.pdf', '_blank');" type="button"
-                            class="btn btn-primary">Understood</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
         <!-- Modal Section -->
-
         <div class="modal-bg">
             <div class="modal">
-                <form onsubmit="window.open('./images/ijlans-resume.pdf', '_blank');">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <!-- onsubmit="window.open('./images/ijlans-resume.pdf', '_blank');" -->
                     <div class="fields">
                         <div class="field name">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" id="name" placeholder="Your Name" required>
                         </div>
                         <div class="field email">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" id="email" placeholder="Your Email" required>
                         </div>
                     </div>
                     <div class="field textarea">
-                        <textarea cols="30" rows="5" placeholder="Message.." required></textarea>
+                        <textarea cols="30" rows="5" id="message" placeholder="Message.." required></textarea>
                     </div>
                     <button>Download CV</button>
                     <span class="modal-close">X</span>
@@ -116,13 +94,9 @@
             </div>
         </div>
 
-
         <div class="max-width ">
             <h2 class="title">About me</h2>
             <div class="about-content">
-
-                <!-- modal -->
-
 
                 <div class="column left">
                     <img src="images/banner-image.png" alt="">
@@ -139,10 +113,6 @@
                     <a class="modal-btn">Download CV</a>
                 </div>
             </div>
-
-
-
-
         </div>
     </section>
 
@@ -343,6 +313,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
