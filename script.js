@@ -95,8 +95,9 @@ $(".submit-form").submit((e) => {
     method: "post",
     success: function (response) {
       alert("Thank You for contacting me")
-      window.location.reload()
       window.open('./images/ijlans-resume.pdf', '_blank');
+      window.location.reload()
+      
     },
     error: function (err) {
       alert("Error")
