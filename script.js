@@ -95,7 +95,8 @@ $(".submit-form").submit((e) => {
     method: "post",
     success: function (response) {
       alert("Thank You for contacting me")
-      window.open('./images/ijlan`s-resume.pdf', '_blank');
+      window.open('./images/ijlan`s-resume.pdf', 'Download');
+
       window.location.reload()
 
     },
